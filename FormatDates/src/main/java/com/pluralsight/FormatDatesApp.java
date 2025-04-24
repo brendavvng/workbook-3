@@ -41,7 +41,7 @@ public class FormatDatesApp {
         ZonedDateTime gmtTimeZone = ZonedDateTime.now(ZoneId.of("GMT"));
         // reformatting to: full name of day of week / month / day / year / hour
         DateTimeFormatter gmtFormat = DateTimeFormatter.ofPattern("EEEE, MMM d, yyyy  HH:mm");
-        System.out.println("GMT Format: " + gmtTimeZone.toLocalTime(gmtFormat));
+        System.out.println("GMT Time Zone Format: " + gmtTimeZone.format(gmtFormat));
 
         // String formatter5 = "HH:mm  EEEE, MMM, d, yyyy  ";
         DateTimeFormatter formatter5 = DateTimeFormatter.ofPattern("HH:mm 'on' d-MMM-yyyy");
