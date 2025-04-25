@@ -2,12 +2,11 @@ package com.pluralsight;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class theApp {
+public class TheApp {
 
     // creating static DateTimeFormatter to get time stamp format pattern of 2025-04-25  hour:minute:seconds
     static DateTimeFormatter timeStampFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd  HH:mm:ss");
@@ -22,6 +21,10 @@ public class theApp {
         // create a variable that will keep us looping the question for the user
         // until they decide to quit
         boolean appRunning = true;
+
+        // if you did not want to use the boolean variable, you could write in "true" with the while loop
+        // for example, "while(true) {"
+        // and also include the "break" to stop the loop
 
         while(appRunning) {
             // creating question to ask user // displaying question to the user
@@ -64,6 +67,8 @@ public class theApp {
             // creates a date and time
             LocalDateTime timeStamp = LocalDateTime.now();
             // create the line to write to the log file by concating the timestamp in the correct format + a space + the action
+            // this is basically saying:
+            // buffWriter, write the timeStamp in the format that I want and include the action, the word / the "search" from the user
             bufWriter.write(timeStamp.format(timeStampFormatter) + "  " + theAction);
             // adding a new line, make sure you have a new line in the file
             bufWriter.newLine();

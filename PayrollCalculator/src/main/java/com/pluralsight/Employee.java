@@ -1,8 +1,5 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-
 public class Employee {
 
     // storing the employee's info
@@ -24,10 +21,12 @@ public class Employee {
         // setting the payRate
         this.payRate = payRate;
     }
-    // generating getters and setters
-    // getters reads the value of private variable
-    // setters allows you to change value of private variable
+
+    // getting gross pay
     public double getGrossPay() {
+        // generating getters and setters
+        // getters reads the value of private variable
+        // setters allows you to change value of private variable
         return this.getHoursWorked() * this.getPayRate();
     }
 
